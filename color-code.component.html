@@ -1,0 +1,8 @@
+<mat-form-field>
+    <mat-label>Color</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let Color of InitialColors"[value="Color.value"]>
+            {{Color.Values}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>

@@ -1,0 +1,64 @@
+span
+{
+    padding-right: 1rem;
+    color:white;
+    
+}
+mat-list-item
+{
+    color: white!important;
+    font-size: 20px;
+    
+}
+mat-sidenav-container
+{
+    
+    height: 100%;
+    width: 100%;
+    margin-top: 0%; 
+}
+mat-sidenav,mat-sidenave-content
+{
+    
+    padding:16px;
+}
+mat-sidenav
+{
+   background-image:url(snb2.jpg)!important;
+   opacity:0.9;
+   background-size:cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+    width: 200px;
+
+}
+
+.logout-button
+{
+    background-attachment: fixed;
+    left:3%;
+    
+}
+.navbar-list
+{
+    margin-top: 5%;
+}
+a:hover {
+    background-color:grey;
+    border:0.1px solid;
+   
+}
+a{ color:white!important;
+ 
+}
+.dashboard-logo
+{
+    height: 20%;
+    width:20%;
+}
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }

@@ -1,0 +1,38 @@
+<mat-sidenav-container fullscreen>
+        <mat-sidenav [(opened)]="opened" mode="side" position="start">
+                <div class="dashboard-logo">
+                    <img src="C:\Users\User\myapp\lg2.png" alt="img">
+                </div>    
+                <div class="dashboard-list">      
+                     <mat-list class="navbar-list" role="list" >
+                            <a mat-list-item (click)="set(0)" >Production</a>
+                            <a mat-list-item (click)="set(1)">Crumb</a>
+                            <a mat-list-item (click)="set(2)">Solution</a>
+                            <a mat-list-item (click)="set(3)">Moldar</a>
+                            <button mat-button [matMenuTriggerFor]="afterMenu"><a mat-list-item >Color</a></button>
+                              <mat-menu #afterMenu="matMenu" xPosition="after">
+                                <button mat-menu-item  (click)="set(4)">Color Name</button>
+                                <button mat-menu-item  (click)="set(5)">Color Code</button>
+                              </mat-menu>
+                            
+                            <a mat-list-item (click)="set(6)">payrole</a>
+                        </mat-list>
+                </div>
+              
+            </mat-sidenav>
+    <mat-sidenav-content style="background-color:lightgrey">
+    
+    <mat-toolbar style="background-color:#1d1c1c">
+        <button mat-icon-button (click)="opened=!opened" style="font-size:20px;color:white"><mat-icon>menu</mat-icon>Menu</button><div style="padding-left:70%;background-attachment: fixed">{{name}}</div>
+        <button mat-raised-button class="logout-button"
+        type="submit"> Logout</button>
+    </mat-toolbar>
+
+     <div class="main-content" [ngSwitch]="Num" style="margin-left: 50px">
+        <!-- <router-outlet></router-outlet> -->
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
+</mat-sidenav-content>
+</mat-sidenav-container>
